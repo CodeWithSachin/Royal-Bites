@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "Royal-Bites"
+  "defaultProject": "Royal-Bites",
+  "cli": {
+    "analytics": false
+  }
 }
