@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="form d-flex flex-column">
+        <div class="head d-flex">
+            <i class="fad fa-user-alien"></i>
+            <h5>User Registration</h5>
+        </div>
+        <div class="input-group">
+            <input type="text" name="email" id="email" class="input" required [(ngModel)]="email">
+            <label for="email" class="input-label" ><i class="far fa-envelope"></i> Email Address</label>
+        </div>
+        <div class="input-group">
+            <input type="password" name="password" class="input" id="password" required [(ngModel)]="password">
+            <label for="password" class="input-label" ><i class="fad fa-lock-alt"></i> Password</label>
+        </div>
+        <button class="cta" (click)="register()">
+            register <i class="fad fa-arrow-right"></i>
+        </button>
+        <div class="register">
+            <p>Already have Account? <span class="register-link" routerLink="/login">Login</span></p>
+        </div>
+    </div>
+</div>

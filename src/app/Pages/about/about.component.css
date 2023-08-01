@@ -1,0 +1,30 @@
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+    padding: 50px;
+}
+.about img{
+    height: 300px;
+    width: 350px;
+    margin-left: 150px;
+}
+.left{
+    padding: 20px;
+    text-transform: capitalize;
+    text-align: justify;
+    line-height: 2;
+}
+.left h2 span{
+    color: rgb(236, 107, 56);
+    font-weight: 700;
+    font-family: "Orbitron", sans-serif;
+}
+.left p{
+    font-weight: 300;
+}
+.right{
+    display: flex;
+    justify-content: center;
+}

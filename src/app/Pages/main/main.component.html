@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+    <ng-container *ngIf="!authService.IsLoggedIn()">
+        <app-about></app-about>
+    </ng-container>
+    <ng-container *ngIf="authService.IsLoggedIn()">
+        <div class="container">
+            <div class="form d-flex flex-column justify-content-center">
+                <div class="input-group">
+                    <input type="text" name="text" class="input" id="text" required [(ngModel)]="searchItem"
+                        (keyup)="search()">
+                    <label for="text" class="input-label"><i class="fad fa-search"></i> It just can't be pizza...</label>
+                </div>
+                <div class="tags d-flex">
+                    <div class="tag" *ngFor="let tag of tags">
+                        <button (click)="tagList(tag.name)" >{{tag.name}}-{{tag.count}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="foodList d-flex flex-row row">
+                <!-- <div class="card " *ngFor="let food of filterList" >
+                    <div class="img">
+                        <img src="{{food.foodImage}}" alt="Food-Image">
+                    </div>
+                    <div class="content ">
+                        <div class="name d-flex justify-content-between">
+                            <h4>{{food.foodName}}</h4>
+                            <span><i class="fas fa-heart favorite"></i></span>
+                        </div>
+                        <div class="price d-flex justify-content-between">
+                            <h5>₹ {{food.foodPrice}}/-</h5>
+                            <div class="time">
+                                <i class="far fa-alarm-clock"></i><span>{{food.cookTime}}</span>
+                            </div>
+                        </div>
+                        <div class="card_btn d-flex justify-content-evenly">
+                            <button (click)="open(food)" class="left">View Food</button>
+                            <button (click)="addToCart(food)" class="right">Add To Cart</button>
+                        </div>
+                    </div>
+                </div> -->
+                <app-foodlist ></app-foodlist>
+            </div>
+        </div>
+    </ng-container>
+</div>

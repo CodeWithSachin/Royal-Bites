@@ -1,0 +1,112 @@
+
+.form{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    outline: 2px solid rgb(236, 107, 56);
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input-group{
+    position: relative;
+    margin: 10px 30px;
+}
+.input{
+    padding: 10px;
+    border: none;
+    border-radius: 4px 4px;
+    font-family: inherit;
+    color: rgb(236, 107, 56);
+    background-color: transparent;
+    outline: 2px solid #000;
+    width: 300px;
+}
+.input-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    /* color: rgb(236, 107, 56); */
+}
+.input:focus+.input-label, .input:valid+.input-label{
+    transform: translate(10px , -14px) scale(.8);
+    color: rgb(236, 107, 56);
+    padding-inline: 5px;
+    background-color:#fff;
+}
+.input:is(:focus, :valid){
+    outline-color: rgb(236, 107, 56);
+}
+.cta {
+    display: flex;
+    align-items: center;
+    color: #000;
+    background: none;
+    border: none;
+    padding: 12px 18px;
+    position: relative;
+    width: 120px;
+    margin: 10px auto;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: #dc143c;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+    z-index: -1;
+}
+
+.cta:hover{
+    color: #fff;
+}
+
+.cta:hover::before {
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta i {
+    margin-left: 15px;
+    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta:hover i {
+    transform: translateX(3px);
+}
+.register{
+    margin: 30px;
+}
+.register-link{
+    color: rgb(236, 107, 56);
+}
+.register-link:hover{
+    cursor: pointer;
+}
+.head{
+    margin: 30px auto;
+    color: rgb(236, 107, 56);
+    width: 100%;
+    justify-content: center;
+}
+.head >h5{
+    line-height: 1.5;
+    padding-left: 5px;
+}
+.head > i{
+    font-size: 30px;
+}
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

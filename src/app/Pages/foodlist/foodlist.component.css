@@ -1,0 +1,110 @@
+.heart{
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top:5px;
+    right: 10px;
+    position: absolute;
+    background-color: #fff;
+}
+.heart i{
+    align-self: center;
+    padding: 6.5px 6px;
+    color: rgb(236, 107, 56);
+}
+
+.heart i:hover{
+    cursor: pointer;
+}
+.h3{
+    padding-left: 20px;
+  font-family: "Orbitron", sans-serif;
+    
+}
+.section{
+    margin:20px 0;
+}
+.card {
+    margin: 15px;
+    width: 290px;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: 300ms ease;
+    /* border: 3px solid rgb(236, 107, 56); */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.card:hover{
+    cursor: pointer;
+}
+.highest{
+    color: darkgoldenrod;
+}
+.high{
+    color: rgb(0, 255, 106);
+}
+.medium{
+    color: rgb(255, 179, 0);
+}
+.low{
+    color: rgb(255, 0, 0);
+}
+.favorite {
+    font-size: 20px;
+}
+.card h4{
+    font-size: 19px;
+}
+.card h5,
+.favorite {
+    font-size: 19px;
+    color: rgb(236, 107, 56);
+}
+
+.card:hover {
+    /* border: 1px solid rgb(236, 107, 56); */
+    box-shadow: 0px 4px 10px rgba(236, 107, 56, 0.2);
+}
+
+
+
+
+
+
+/* .card_btn .left {
+    background-color: #fff;
+    border: 2px solid rgb(236, 107, 56);
+}
+
+.card_btn .left:hover {
+    background-color: rgb(236, 107, 56);
+    color: #fff;
+} */
+
+.card_btn .right {
+    background-color: rgb(236, 107, 56);
+    color: #fff;
+    border: 2px solid rgb(236, 107, 56);
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 3px 0;
+}
+
+
+.content {
+    /* margin: 8px;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 0 0 20px 20px; */
+    padding: 5px !important;
+}
+
+.food_img, img {
+    width: 100%;
+    height: 180px;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+}

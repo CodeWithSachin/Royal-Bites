@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>Shopping Cart</b></h4>
+                    </div>
+                    <div class="col align-self-center text-right text-muted">{{cartService.getCartLength()}} Item</div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center" *ngFor="let item of checkout_product">
+                    <div class="col-2"><img class="img-fluid" src={{item.image}}></div>
+                    <div class="col">
+                        <div class="row text-muted">{{item.name}}</div>
+                        <!-- <div class="row">Cotton T-shirt</div> -->
+                    </div>
+                    <!-- <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div> -->
+                    <div class="col">&#8377; {{item.price}} <a (click)="removeItem(item)" class="close">&#10005;</a></div>
+                </div>
+            </div>
+            <div class="back-to-shop"><a routerLink="/">&leftarrow;<span class="text-muted"> Back to shop</span></a></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div>
+                <h5><b>Summary</b></h5>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;">ITEMS {{cartService.getCartLength()}}</div>
+                <div class="col text-right">&#8377; {{cartService.getTotal()}}</div>
+            </div>
+            <form>
+                <p>SHIPPING</p>
+                <select>
+                    <option class="text-muted">Standard-Delivery- Free</option>
+                </select>
+                <p>GIVE CODE</p>
+                <input id="code" placeholder="Enter your code">
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right">&#8377; {{cartService.getTotal()}}</div>
+            </div>
+            <button class="btn" routerLink="/payment">CHECKOUT</button>
+        </div>
+    </div>
+
+</div>

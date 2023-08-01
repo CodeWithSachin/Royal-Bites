@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="header d-flex justify-content-around">
+        <img src="../../../assets/Royal_Bites_Logo.png" alt="">
+        <h1>ROYAL BITES</h1>
+    </div>
+    <div class="card  row " >
+        <div class="col-md-6 img">
+            <img src="{{foodData.image}}" alt="">
+        </div>
+        <div class="col-md-6 content d-flex flex-column justify-content-between">
+            <div class="top">
+                <h1>{{foodData.name}}</h1>
+            </div>
+            <div class="middle d-flex flex-column justify-content-evenly">
+                <div class="middle_top row p2">
+                    <h5 class="col-md-6 ">Price: ₹ {{foodData.price}}/-</h5>
+                    <h5 class="col-md-6"> Ratings: {{foodData.ratings}} <i class="fas fa-star"  [ngClass]="foodData.ratings >= 4 && foodData.ratings <5? 'high' : foodData.ratings < 4 && foodData.ratings >=3 ? 'medium': foodData.ratings == 5? 'highest': 'low'"></i></h5>
+                </div>
+                <div class="middle_top row p2">
+                    <h5 class="col-md-6"><i class="fad fa-clock"></i> : {{foodData.cookTime}} Min.</h5>
+                    <h5 class="col-md-6">Origin Country: <span> {{foodData.origin}} </span></h5>
+                </div>
+            </div>
+            <div class="bottom">
+                <h5>Description</h5>
+                <p>{{foodData.desc}}</p>
+            </div>
+            
+            <!-- <div class="name">
+                <h1>{{foodData.name}}</h1>
+            </div>
+            <div class="price d-flex justify-content-around">
+                <h4>Price: ₹ {{foodData.price}}/-</h4>
+                <h4>Rating: {{foodData.ratings}}</h4>
+            </div>
+            <div class="origin d-flex justify-content-center">
+                <h4>Origin Country: <span> {{foodData.origin}} </span></h4>
+            </div>
+            <div class="time d-flex justify-content-around">
+                <h4><i class="fad fa-clock"></i> {{foodData.cookTime}}</h4>
+                <span>Wishlist: <i class="fas fa-heart"></i></span>
+            </div> -->
+        </div>
+    </div>
+    <div class="footer d-flex justify-content-center">
+        <button class="button" (click)="addToCart(foodData)">Add To Cart</button>
+    </div>
+</div>

@@ -1,0 +1,155 @@
+.container-fluid {
+  height: 90px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  /* border-bottom: 3px solid #000; */
+}
+
+.left_header {
+  width: 27%;
+  padding-left: 20px;
+}
+
+.name h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+
+.left_header:hover {
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: .2rem;
+  left: 2rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.logo::before{
+  content: "";
+  position: absolute;
+  /* background: url(../../../assets/Royal_Bites_Logo.png); */
+  width: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo::after{
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-color: hsla(0, 0%, 100%, .9);
+
+  /* background-color: rgba(232, 223, 170, 0.9); */
+  /* background-color: red; */
+  bottom: 0;
+  left: -50%;
+  border-radius: 35%;
+  animation: waves 5s ease-in-out alternate infinite;
+}
+
+@keyframes waves {
+  to {
+    transform: translateY(-50%)rotate(540deg);
+  }
+}
+
+
+.rest_name {
+  margin-right: 0;
+  height: 20px;
+  margin-top: 25px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.links {
+  margin: 25px 0;
+  width: 80%;
+}
+
+ul li {
+  margin: 0 50px;
+  font-size: 18px;
+}
+ul li a {
+  transition: 400ms ease;
+}
+ul li a:hover {
+  color: #fff;
+  text-shadow: 4px 4px 4px #aaa;
+  cursor: pointer;
+}
+ul li a span {
+  color: rgb(236, 107, 56);
+}
+
+/* ============== */
+
+.header {
+  /* background-color: #F3F3F3; */
+  display: flex;
+  align-items: baseline;
+  padding: 2px;
+  /* gap: 1rem; */
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #000;
+  /* font-weight: 600; */
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: #fff;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  border: 2px solid #000;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  background-color: rgb(238, 207, 51);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}

@@ -1,0 +1,65 @@
+<div class="section">
+    <span class="h3">Best Sellings</span>
+    <hr>
+</div>
+<div class="best_selling d-flex row">
+
+    <div class="card col-md-3" *ngFor="let item of bestSellingList">
+        <div class="food_img">
+            <img src="{{item.foodImage}}" alt="" (click)="open(item)">
+            <div class="heart">
+                <i (click)="status = !status" [ngClass]="item.favorite ? 'fas': 'far'" class=" fa-heart"></i>
+            </div>
+        </div>
+        <div class="content ">
+            <div class="name d-flex justify-content-between">
+                <h4 (click)="open(item)">{{item.foodName}}</h4>
+                <h5>₹ {{item.foodPrice}}/-</h5>
+                <!-- <p>{{item.desc}}</p> -->
+
+                <!-- <span><i class="fas fa-heart favorite"></i></span> -->
+            </div>
+            <div class="price d-flex justify-content-between">
+                <div class="time">
+                    <span>{{item.foodRatings}}</span> <i class="fas fa-star"  [ngClass]="item.foodRatings >= 4 && item.foodRatings <5? 'high' : item.foodRatings < 4 && item.foodRatings >=3 ? 'medium': item.foodRatings == 5? 'highest': 'low'"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="card_btn ">
+            <button (click)="addToCart(item)" class="right">Add To Cart</button>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <span class="h3">Recommended</span>
+    <hr>
+</div>
+<div class="best_selling d-flex row">
+
+    <div class="card col-md-3" *ngFor="let item of recommenededList">
+        <div class="food_img">
+            <img src="{{item.foodImage}}" alt="" (click)="open(item)">
+            <div class="heart">
+                <i class=" fa-heart" [ngClass]="item.favorite ? 'fas': 'far'"></i>
+            </div>
+        </div>
+        <div class="content ">
+            <div class="name d-flex justify-content-between">
+                <h4 (click)="open(item)">{{item.foodName}}</h4>
+                <h5>₹ {{item.foodPrice}}/-</h5>
+                <!-- <span><i class="fas fa-heart favorite"></i></span> -->
+            </div>
+            <div class="price d-flex justify-content-between">
+                <div class="time">
+                    <span>{{item.foodRatings}}</span> <i class="fas fa-star" [ngClass]="item.foodRatings >= 4 && item.foodRatings <5? 'high' : item.foodRatings < 4 && item.foodRatings >=3 ? 'medium': item.foodRatings == 5? 'highest': 'low'"></i>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="card_btn ">
+            <button (click)="addToCart(item)" class="right">Add To Cart</button>
+        </div>
+    </div>
+</div>
